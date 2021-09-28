@@ -42,4 +42,6 @@ app.get("/patients/:id", (req, res) => {
   res.status(404).send(`Patient with hn = ${hn} doesn't exist!`);
 });
 
-app.listen(PORT, () => console.log("server runnig: " + PORT));
+app.listen(process.env.PORT || 5000, () =>
+  console.log("server runnig: " + PORT)
+);
