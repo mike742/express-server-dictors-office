@@ -1,22 +1,23 @@
 {
-  "name": "express-server-dictors-office",
+  "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "blah-blah",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "example",
-    "heroku"
+    "heroku",
+    "example"
   ],
   "author": "Mike",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
   },
   "engines": {
     "node": "14.17.0"

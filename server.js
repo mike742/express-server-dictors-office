@@ -1,7 +1,7 @@
 const express = require("express");
 const parser = require("body-parser");
 const cors = require("cors");
-const PORT = 3001;
+const PORT = process.env.PORT || 5000; // 3001;
 const app = express();
 
 app.use(parser.json());
@@ -25,8 +25,8 @@ const patients = [
     healthNumber: 12302,
     name: "Patient Mark",
     dateOfBirth: new Date(1991, 5, 5),
-    address: "111, Main St., Winnipeg",
-    phoneNumber: "204 123-4567",
+    address: "12, Broadway, Winnipeg",
+    phoneNumber: "204 123-22222",
   },
 ];
 
@@ -42,6 +42,4 @@ app.get("/patients/:id", (req, res) => {
   res.status(404).send(`Patient with hn = ${hn} doesn't exist!`);
 });
 
-app.listen(process.env.PORT || 5000, () =>
-  console.log("server runnig: " + PORT)
-);
+app.listen(PORT, () => console.log("server runnig: " + PORT));
