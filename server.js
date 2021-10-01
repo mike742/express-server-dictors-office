@@ -32,7 +32,6 @@ const patients = [
 
 app.get("/doctors", (req, res) => res.send(doctors));
 app.get("/patients", (req, res) => res.send(patients));
-
 app.get("/patients/:id", (req, res) => {
   const hn = req.params.id;
   const patient = patients.find((p) => p.healthNumber === +hn);
