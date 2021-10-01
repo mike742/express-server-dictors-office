@@ -28,6 +28,13 @@ const patients = [
     address: "12, Broadway, Winnipeg",
     phoneNumber: "204 123-22222",
   },
+  {
+    healthNumber: 12303,
+    name: "Patient Tracy",
+    dateOfBirth: new Date(1995, 7, 6),
+    address: "747, Corydon, Winnipeg",
+    phoneNumber: "204 777-55555",
+  },
 ];
 
 app.get("/doctors", (req, res) => res.send(doctors));
